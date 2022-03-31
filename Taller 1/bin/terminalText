@@ -1,0 +1,187 @@
+7992  execve("./hai", ["./hai", "ls"], 0x7ffeacfa2158 /* 50 vars */) = 0
+7992  brk(NULL)                         = 0x8190000
+7992  arch_prctl(0x3001 /* ARCH_??? */, 0xfffb8588) = -1 EINVAL (Argumento inválido)
+7992  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No existe el archivo o el directorio)
+7992  mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xf7f12000
+7992  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No existe el archivo o el directorio)
+7992  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+7992  fstat64(3, {st_mode=S_IFREG|0644, st_size=98689, ...}) = 0
+7992  mmap2(NULL, 98689, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf7ef9000
+7992  close(3)                          = 0
+7992  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No existe el archivo o el directorio)
+7992  openat(AT_FDCWD, "/lib32/libc.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+7992  read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\220\260\1\0004\0\0\0"..., 512) = 512
+7992  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0X\245\217/\315\257\335\254\264\240\2049\352.\341c"..., 96, 468) = 96
+7992  fstat64(3, {st_mode=S_IFREG|0755, st_size=2004160, ...}) = 0
+7992  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0X\245\217/\315\257\335\254\264\240\2049\352.\341c"..., 96, 468) = 96
+7992  mmap2(NULL, 2012864, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xf7d0d000
+7992  mprotect(0xf7d26000, 1888256, PROT_NONE) = 0
+7992  mmap2(0xf7d26000, 1409024, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0xf7d26000
+7992  mmap2(0xf7e7e000, 475136, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x171000) = 0xf7e7e000
+7992  mmap2(0xf7ef3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e5000) = 0xf7ef3000
+7992  mmap2(0xf7ef6000, 9920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xf7ef6000
+7992  close(3)                          = 0
+7992  set_thread_area({entry_number=-1, base_addr=0xf7f130c0, limit=0x0fffff, seg_32bit=1, contents=0, read_exec_only=0, limit_in_pages=1, seg_not_present=0, useable=1}) = 0 (entry_number=12)
+7992  mprotect(0xf7ef3000, 8192, PROT_READ) = 0
+7992  mprotect(0x8049000, 4096, PROT_READ) = 0
+7992  mprotect(0xf7f45000, 4096, PROT_READ) = 0
+7992  munmap(0xf7ef9000, 98689)         = 0
+7992  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xf7f13128) = 7993
+7992  rt_sigaction(SIGINT, {sa_handler=0x8048615, sa_mask=[INT], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+7992  clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+7993  rt_sigaction(SIGURG, {sa_handler=0x80485e4, sa_mask=[URG], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+7992  <... clock_nanosleep_time64 resumed>0xfffb84dc) = 0
+7992  write(1, "sup!\n", 5)             = 5
+7992  kill(7993, SIGURG)                = 0
+7993  --- SIGURG {si_signo=SIGURG, si_code=SI_USER, si_pid=7992, si_uid=1002} ---
+7992  clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+7993  write(1, "ya va!\n", 7)           = 7
+7993  sigreturn({mask=[]})              = 0
+7992  <... clock_nanosleep_time64 resumed>0xfffb84dc) = 0
+7992  write(1, "sup!\n", 5)             = 5
+7992  kill(7993, SIGURG)                = 0
+7993  --- SIGURG {si_signo=SIGURG, si_code=SI_USER, si_pid=7992, si_uid=1002} ---
+7993  write(1, "ya va!\n", 7 <unfinished ...>
+7992  clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+7993  <... write resumed>)              = 7
+7993  sigreturn({mask=[]})              = 1
+7992  <... clock_nanosleep_time64 resumed>0xfffb84dc) = 0
+7992  write(1, "sup!\n", 5)             = 5
+7992  kill(7993, SIGURG)                = 0
+7993  --- SIGURG {si_signo=SIGURG, si_code=SI_USER, si_pid=7992, si_uid=1002} ---
+7992  clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+7993  write(1, "ya va!\n", 7)           = 7
+7993  sigreturn({mask=[]})              = 2
+7992  <... clock_nanosleep_time64 resumed>0xfffb84dc) = 0
+7992  write(1, "sup!\n", 5)             = 5
+7992  kill(7993, SIGURG)                = 0
+7993  --- SIGURG {si_signo=SIGURG, si_code=SI_USER, si_pid=7992, si_uid=1002} ---
+7993  write(1, "ya va!\n", 7 <unfinished ...>
+7992  clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+7993  <... write resumed>)              = 7
+7993  sigreturn({mask=[]})              = 3
+7992  <... clock_nanosleep_time64 resumed>0xfffb84dc) = 0
+7992  write(1, "sup!\n", 5)             = 5
+7992  kill(7993, SIGURG)                = 0
+7993  --- SIGURG {si_signo=SIGURG, si_code=SI_USER, si_pid=7992, si_uid=1002} ---
+7992  clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+7993  write(1, "ya va!\n", 7)           = 7
+7993  sigreturn({mask=[]})              = 4
+7993  getppid()                         = 7992
+7993  kill(7992, SIGINT)                = 0
+7992  <... clock_nanosleep_time64 resumed>{tv_sec=0, tv_nsec=999927429}) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+7992  --- SIGINT {si_signo=SIGINT, si_code=SI_USER, si_pid=7993, si_uid=1002} ---
+7993  execve("/home/clinux01/bochs/bin//ls", ["ls"], 0xfffb8640 /* 50 vars */ <unfinished ...>
+7992  wait4(-1,  <unfinished ...>
+7993  <... execve resumed>)             = -1 ENOENT (No existe el archivo o el directorio)
+7993  execve("/usr/local/sbin/ls", ["ls"], 0xfffb8640 /* 50 vars */) = -1 ENOENT (No existe el archivo o el directorio)
+7993  execve("/usr/local/bin/ls", ["ls"], 0xfffb8640 /* 50 vars */) = -1 ENOENT (No existe el archivo o el directorio)
+7993  execve("/usr/sbin/ls", ["ls"], 0xfffb8640 /* 50 vars */) = -1 ENOENT (No existe el archivo o el directorio)
+7993  execve("/usr/bin/ls", ["ls"], 0xfffb8640 /* 50 vars */) = 0
+7993  brk(NULL)                         = 0x5600ee2bc000
+7993  arch_prctl(0x3001 /* ARCH_??? */, 0x7fff4c3bd910) = -1 EINVAL (Argumento inválido)
+7993  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No existe el archivo o el directorio)
+7993  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+7993  fstat(3, {st_mode=S_IFREG|0644, st_size=98689, ...}) = 0
+7993  mmap(NULL, 98689, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f792e360000
+7993  close(3)                          = 0
+7993  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+7993  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@p\0\0\0\0\0\0"..., 832) = 832
+7993  fstat(3, {st_mode=S_IFREG|0644, st_size=163200, ...}) = 0
+7993  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f792e35e000
+7993  mmap(NULL, 174600, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f792e333000
+7993  mprotect(0x7f792e339000, 135168, PROT_NONE) = 0
+7993  mmap(0x7f792e339000, 102400, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f792e339000
+7993  mmap(0x7f792e352000, 28672, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f792e352000
+7993  mmap(0x7f792e35a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f792e35a000
+7993  mmap(0x7f792e35c000, 6664, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f792e35c000
+7993  close(3)                          = 0
+7993  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+7993  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360A\2\0\0\0\0\0"..., 832) = 832
+7993  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+7993  pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+7993  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\237\333t\347\262\27\320l\223\27*\202C\370T\177"..., 68, 880) = 68
+7993  fstat(3, {st_mode=S_IFREG|0755, st_size=2029560, ...}) = 0
+7993  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+7993  pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+7993  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\237\333t\347\262\27\320l\223\27*\202C\370T\177"..., 68, 880) = 68
+7993  mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f792e141000
+7993  mmap(0x7f792e163000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f792e163000
+7993  mmap(0x7f792e2db000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f792e2db000
+7993  mmap(0x7f792e329000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f792e329000
+7993  mmap(0x7f792e32f000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f792e32f000
+7993  close(3)                          = 0
+7993  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+7993  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\"\0\0\0\0\0\0"..., 832) = 832
+7993  fstat(3, {st_mode=S_IFREG|0644, st_size=584392, ...}) = 0
+7993  mmap(NULL, 586536, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f792e0b1000
+7993  mmap(0x7f792e0b3000, 409600, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f792e0b3000
+7993  mmap(0x7f792e117000, 163840, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x66000) = 0x7f792e117000
+7993  mmap(0x7f792e13f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8d000) = 0x7f792e13f000
+7993  close(3)                          = 0
+7993  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+7993  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \22\0\0\0\0\0\0"..., 832) = 832
+7993  fstat(3, {st_mode=S_IFREG|0644, st_size=18816, ...}) = 0
+7993  mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f792e0ab000
+7993  mmap(0x7f792e0ac000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f792e0ac000
+7993  mmap(0x7f792e0ae000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f792e0ae000
+7993  mmap(0x7f792e0af000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f792e0af000
+7993  close(3)                          = 0
+7993  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+7993  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220q\0\0\0\0\0\0"..., 832) = 832
+7993  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\360\2300%\360\340\363'\246\332u/\364\377\246u"..., 68, 824) = 68
+7993  fstat(3, {st_mode=S_IFREG|0755, st_size=157224, ...}) = 0
+7993  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\360\2300%\360\340\363'\246\332u/\364\377\246u"..., 68, 824) = 68
+7993  mmap(NULL, 140408, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f792e088000
+7993  mmap(0x7f792e08e000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f792e08e000
+7993  mmap(0x7f792e09f000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7f792e09f000
+7993  mmap(0x7f792e0a5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000) = 0x7f792e0a5000
+7993  mmap(0x7f792e0a7000, 13432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f792e0a7000
+7993  close(3)                          = 0
+7993  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f792e086000
+7993  arch_prctl(ARCH_SET_FS, 0x7f792e087400) = 0
+7993  mprotect(0x7f792e329000, 16384, PROT_READ) = 0
+7993  mprotect(0x7f792e0a5000, 4096, PROT_READ) = 0
+7993  mprotect(0x7f792e0af000, 4096, PROT_READ) = 0
+7993  mprotect(0x7f792e13f000, 4096, PROT_READ) = 0
+7993  mprotect(0x7f792e35a000, 4096, PROT_READ) = 0
+7993  mprotect(0x5600ec47c000, 4096, PROT_READ) = 0
+7993  mprotect(0x7f792e3a6000, 4096, PROT_READ) = 0
+7993  munmap(0x7f792e360000, 98689)     = 0
+7993  set_tid_address(0x7f792e0876d0)   = 7993
+7993  set_robust_list(0x7f792e0876e0, 24) = 0
+7993  rt_sigaction(SIGRTMIN, {sa_handler=0x7f792e08ebf0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f792e09c3c0}, NULL, 8) = 0
+7993  rt_sigaction(SIGRT_1, {sa_handler=0x7f792e08ec90, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f792e09c3c0}, NULL, 8) = 0
+7993  rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+7993  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+7993  statfs("/sys/fs/selinux", 0x7fff4c3bd860) = -1 ENOENT (No existe el archivo o el directorio)
+7993  statfs("/selinux", 0x7fff4c3bd860) = -1 ENOENT (No existe el archivo o el directorio)
+7993  brk(NULL)                         = 0x5600ee2bc000
+7993  brk(0x5600ee2dd000)               = 0x5600ee2dd000
+7993  openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+7993  fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+7993  read(3, "nodev\tsysfs\nnodev\ttmpfs\nnodev\tbd"..., 1024) = 375
+7993  read(3, "", 1024)                 = 0
+7993  close(3)                          = 0
+7993  access("/etc/selinux/config", F_OK) = -1 ENOENT (No existe el archivo o el directorio)
+7993  openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+7993  fstat(3, {st_mode=S_IFREG|0644, st_size=8378608, ...}) = 0
+7993  mmap(NULL, 8378608, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f792d888000
+7993  close(3)                          = 0
+7993  ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+7993  ioctl(1, TIOCGWINSZ, {ws_row=55, ws_col=203, ws_xpixel=0, ws_ypixel=0}) = 0
+7993  openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+7993  fstat(3, {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+7993  getdents64(3, /* 5 entries */, 32768) = 136
+7993  getdents64(3, /* 0 entries */, 32768) = 0
+7993  close(3)                          = 0
+7993  fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+7993  write(1, "hai  hai64  terminalText\n", 25) = 25
+7993  close(1)                          = 0
+7993  close(2)                          = 0
+7993  exit_group(0)                     = ?
+7993  +++ exited with 0 +++
+7992  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 7993
+7992  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=7993, si_uid=1002, si_status=0, si_utime=500, si_stime=0} ---
+7992  exit_group(0)                     = ?
+7992  +++ exited with 0 +++
