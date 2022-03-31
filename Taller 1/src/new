@@ -30,10 +30,8 @@ int main(int argc, char* argv[]) {
 			if (WIFEXITED(status)) break; /* Proceso terminado */
 			int syscall_num = ptrace(PTRACE_PEEKUSER, child, 8* ORIG_RAX, NULL);
 			int syscall_err = ptrace(PTRACE_PEEKUSER, child, 8* RAX, NULL);
-			int kill_parameter= ptrace(PTRACE_PEEKUSER, child, 8* RSI, NULL);
-			if(syscall_num == 62 && kill_parameter==9 && syscall_err==-ENOSYS){
-				ptrace(PTRACE_KILL);
-				//kill(child, SIGKILL);
+			if(syscall_num == 62 && syscall_err==-ENOSYS){
+				kill(child, SIGKILL);
 				printf("Fin\n");
 				break;
 			}
